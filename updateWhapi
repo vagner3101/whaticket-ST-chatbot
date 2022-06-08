@@ -1,0 +1,19 @@
+#!/bin/bash
+echo "Actualizando Whapi, esper por favor."
+echo "Actaulizando backend."
+
+git pull
+cd backend
+npm install
+rm -rf dist
+npm run build
+npx sequelize db:migrate
+npx sequelize db:seed
+echo "Actaulizando frontend."
+cd ../frontend
+npm install --legacy-peer-deps
+rm -rf build
+npm run build
+pm2 restart all
+
+echo "Actualizacion Finalizada"
