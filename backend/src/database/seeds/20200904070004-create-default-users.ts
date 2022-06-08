@@ -7,7 +7,7 @@ module.exports = {
       [
         {
           name: "Administrador",
-          email: "admin@whapi.ga",
+          email: "admin@whatsatende.com.br",
           passwordHash:
             "$2a$08$WaEmpmFDD/XkDqorkpQ42eUZozOqRCPkPcTkmHHMyuTGUOkI8dHsq",
           profile: "admin",
